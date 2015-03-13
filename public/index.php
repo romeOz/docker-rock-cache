@@ -3,10 +3,14 @@
 use rock\cache\Memcached;
 use rock\cache\CacheInterface;
 use League\Flysystem\Adapter\Local;
-use rock\cache\filemanager\FileManager;
 use rock\cache\CacheFile;
+use rock\file\FileManager;
 
-include_once(__DIR__ . '/vendor/autoload.php');
+if (version_compare(PHP_VERSION, '5.4.0', '<')) {
+    die('need to use PHP version 5.4.x or greater');
+}
+
+require(dirname(__DIR__) . '/vendor/autoload.php');
 
 /** Memcached storage */
 
@@ -52,7 +56,7 @@ $cacheFile->flush(); // Invalidate all items in the cache
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Demo Rock cache</title>
+    <title>Demo Rock Cache</title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/highlight/github.css" rel="stylesheet">
     <link href="/assets/css/demo.css" rel="stylesheet">
@@ -65,7 +69,7 @@ $cacheFile->flush(); // Invalidate all items in the cache
 <body>
 <div class="container main" role="main">
     <div class="demo-header">
-        <h1 class="demo-title">Demo Rock cache</h1>
+        <h1 class="demo-title">Demo Rock Cache</h1>
         <p class="lead demo-description">The example cache.</p>
     </div>
     <div class="demo-main">

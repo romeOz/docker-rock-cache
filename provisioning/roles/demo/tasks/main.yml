@@ -1,19 +1,3 @@
-- name: Clone project
-  shell: composer create-project --dev romeoz/rock-cache {{ rootFolder }} creates="{{ rootFolder }}"
-  tags:
-    - demo
-
-- name: Create index.php
-  copy: src=index.php dest={{ rootFolder }} owner={{ username }} mode=0644
-  tags:
-    - demo
-
-- name: Copy assets
-  copy: src=assets dest={{ rootFolder }} owner={{ username }} mode=0644
-  tags:
-    - demo
-
-- name: chown folder project
-  shell: chown {{ user }}:{{ group }} {{ rootFolder }} -Rf
-  tags:
-    - demo
+- name: Installing dependencies
+  shell: composer require romeoz/rock-cache:* chdir={{ root_dir }}
+  tags: demo
