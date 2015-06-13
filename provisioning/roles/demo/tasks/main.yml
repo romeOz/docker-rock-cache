@@ -1,5 +1,5 @@
 - name: Installing dependencies
-  shell: composer require romeoz/rock-cache:* chdir={{ root_dir }}
+  shell: composer require romeoz/rock-cache:0.10.* chdir={{ root_dir }}
   tags: demo
 
 - name: chown project
