@@ -4,13 +4,13 @@
 sudo apt-get install autoconf
 
 # install this version
-VERSION=1.2.2 # 1.2.2 for couchbase-server 2.2.0
+VERSION=2.0.7 # 1.2.2 for couchbase-server 2.2.0
 
 cd /tmp/
 
 # compile manually, because `pecl install apcu-beta` keep asking questions
-wget http://pecl.php.net/get/couchbase-$VERSION.tgz
-tar zxvf couchbase-$VERSION.tgz
+wget http://pecl.php.net/get/couchbase-${VERSION}.tgz
+tar zxvf couchbase-${VERSION}.tgz
 cd "couchbase-${VERSION}"
 phpize && ./configure && make install && echo "Installed ext/couchbase-${VERSION}"
 
