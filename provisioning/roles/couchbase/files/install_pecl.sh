@@ -4,7 +4,7 @@
 sudo apt-get install autoconf
 
 # install this version
-VERSION=2.0.7 # 1.2.2 for couchbase-server 2.2.0
+VERSION=1.2.2 # 1.2.2 for couchbase-server 2.2.0
 
 cd /tmp/
 
