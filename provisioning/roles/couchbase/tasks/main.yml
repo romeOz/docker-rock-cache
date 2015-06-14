@@ -19,8 +19,22 @@
     - libcouchbase-dev
   tags: couchbase
 
-- name: install PECL
+- name: autoconf install
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - autoconf
+
+- name: Download and uncompress PECL
+  shell: "cd /tmp && wget http://pecl.php.net/get/couchbase-1.2.2.tgz && tar zxvf couchbase-1.2.2.tgz"
+  tags: couchbase
+
+- name: Install PECL
   sudo: yes
-  script: install_pecl.sh
-  tags: couchbase  
+  shell: "cd /tmp/couchbase-1.2.2 && phpize && ./configure && make install && echo 'extension = couchbase.so' >> /etc/php5/fpm/conf.d/couchbase.ini && echo 'extension = couchbase.so' >> /etc/php5/cli/conf.d/couchbase.ini"
+  tags: couchbase
+
+- name: Create test bucket
+  sudo: yes
+  shell: "/opt/couchbase/bin/couchbase-cli bucket-create -c 127.0.0.1:8091 --bucket=default --bucket-type=memcached --bucket-ramsize=64 --enable-flush=1 -u demo -p demo"
+  tags: couchbase
 #  shell: sudo pecl install couchbase
