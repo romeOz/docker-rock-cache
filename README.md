@@ -17,6 +17,7 @@ See Demo (one of three ways)
  * `git clone https://github.com/romeOz/vagrant-rock-cache.git`
  * [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
  * [Install Vagrant](https://www.vagrantup.com/downloads), and additional Vagrant plugins `vagrant plugin install vagrant-hostsupdater vagrant-vbguest vagrant-cachier`
+ * [Install Ansible](http://docs.ansible.com/intro_installation.html#latest-releases-via-apt-ubuntu)
  * `vagrant up`
  * Open demo [http://www.rock-cache/](http://www.rock-cache/) or [http://192.168.33.33/](http://192.168.33.33/)
 
@@ -26,15 +27,6 @@ See Demo (one of three ways)
 vagrant ssh
 cd /var/www/rock-cache
 ```
-
-Changelog "Rock cache"
--------------------
- * [Release 0.10.0](https://github.com/romeOz/rock-cache/releases/tag/0.10.0)
- * [Release 0.9.4](https://github.com/romeOz/rock-cache/releases/tag/0.9.4)
- * [Release 0.9.3](https://github.com/romeOz/rock-cache/releases/tag/0.9.3)
- * [Release 0.9.2](https://github.com/romeOz/rock-cache/releases/tag/0.9.2)
- * [Release 0.9.1](https://github.com/romeOz/rock-cache/releases/tag/0.9.1)
- * [Release 0.9.0](https://github.com/romeOz/rock-cache/releases/tag/0.9.0)
  
 License
 -------------------
