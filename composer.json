@@ -18,15 +18,5 @@
     "require": {
       "php": ">=5.4.0",
       "romeoz/rock-cache" : "0.10.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "apps\\": "apps/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.10-dev"
-        }
     }
 }
