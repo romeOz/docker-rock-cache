@@ -1,0 +1,32 @@
+{
+    "name": "romeoz/vagrant-rock-cache",
+    "description": "Demo for Rock cache",
+    "keywords": ["rock", "cache", "demo"],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "email": "serggalka@gmail.com",
+        "issues": "https://github.com/romeOz/vagrant-rock-cache/issues",
+        "source": "https://github.com/romeOz/vagrant-rock-cache"
+    },
+    "authors": [
+        {
+            "name": "Ruslan",
+            "email": "serggalka@gmail.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.4.0",
+      "romeoz/rock-cache" : "0.10.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "apps\\": "apps/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.10-dev"
+        }
+    }
+}
