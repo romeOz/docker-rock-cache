@@ -57,25 +57,18 @@ $cacheFile->flush(); // Invalidate all items in the cache
 <html>
 <head>
     <title>Demo Rock Cache</title>
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/highlight/github.css" rel="stylesheet">
-    <link href="/assets/css/demo.css" rel="stylesheet">
-
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <script src="/assets/js/highlight.pack.js"></script>
-    <script src="/assets/js/demo.js"></script>
+    <link href="/assets/css/demo.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container main" role="main">
-    <div class="demo-header">
-        <h1 class="demo-title">Demo Rock Cache</h1>
-        <p class="lead demo-description">The example cache.</p>
-    </div>
-    <div class="demo-main">
-        <div class="demo-post-title">
+<main class="container main" role="main">
+    <header class="header">
+        <h1 class="title">Demo Rock Cache</h1>
+        <p class="lead description">The example cache.</p>
+    </header>
+    <div class="main">
+        <header class="post-title">
             Memcached storage
-        </div>
+        </header>
         <pre><code class="php"><!--
 -->use rock\cache\Memcached;
 use rock\cache\CacheInterface;
@@ -99,9 +92,9 @@ var_export($memcached->get('key_1')); // result: ['foo', 'bar'];<!--
 
 
 
-        <div class="demo-post-title">
+        <header class="post-title">
             Local storage
-        </div>
+        </header>
         <pre><code class="php"><!--
 -->use rock\cache\CacheInterface;
 use League\Flysystem\Adapter\Local;
@@ -127,12 +120,11 @@ var_export($cacheFile->get('key_1')); // result: foo;<!--
         Result:
         <pre><code class="html"><?=var_export($result_2)?></code></pre>
     </div>
-</div>
-<div class="demo-footer">
+</main>
+<footer class="footer">
     <p>Demo template built on <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://github.com/romeOz">@romeo</a>.</p>
-    <p>
-        <a href="#">Back to top</a>
-    </p>
-</div>
+    <p><a href="#">Back to top</a></p>
+</footer>
+<script src="/assets/js/demo.min.js"></script>
 </body>
 </html>
