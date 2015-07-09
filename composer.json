@@ -17,6 +17,6 @@
     ],
     "require": {
       "php": ">=5.4.0",
-      "romeoz/rock-cache" : "0.10.*"
+      "romeoz/rock-cache" : "0.11.*"
     }
 }
