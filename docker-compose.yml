@@ -1,0 +1,10 @@
+web:
+  image: app
+  ports:
+   - "8080:80"
+  links:
+   - memcahed:memcahed
+  restart: always
+memcahed:
+  image: romeoz/docker-memcached
+  restart: always

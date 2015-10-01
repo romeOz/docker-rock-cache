@@ -1,25 +1,19 @@
-FROM ubuntu:trusty
+FROM romeoz/docker-nginx-php
 MAINTAINER romeOz <serggalka@gmail.com>
 
-RUN	\
-	# Update packages list, upgrade installed packages
-	apt-get -y update && \
-	apt-get -y upgrade && \
-	apt-get install -y build-essential software-properties-common python-software-properties curl git-core libxml2-dev libxslt1-dev libfreetype6-dev python-pip python-apt python-dev && \
-	pip install https://pypi.python.org/packages/source/a/ansible/ansible-1.9.1.tar.gz
+RUN apt-get update \
+    && apt-get install -y php5-memcached \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /etc/nginx/sites-enabled/*
 
-# Add playbooks to the Docker image
-ADD ./ /var/www/rock-cache/
+ADD ./sites-enabled/ /etc/nginx/sites-enabled/
+ADD ./src/ /var/www/rock-cache/
+
 WORKDIR /var/www/rock-cache/
 
-# Install ansible-playbook
-RUN ansible-playbook -v provisioning/docker.yml -i 'docker,' -c local
+RUN composer install --prefer-dist --no-dev \
+    && chown www-data:www-data /var/www/rock-cache -R
 
-# Install supervisor
-RUN apt-get install -y supervisor && mkdir -p /var/log/supervisory
-
-ADD ./provisioning/supervisord.conf /etc/supervisor/conf.d/
-
-EXPOSE 22 80
+EXPOSE 80
 
 CMD ["/usr/bin/supervisord"]

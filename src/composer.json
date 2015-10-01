@@ -1,0 +1,22 @@
+{
+    "name": "romeoz/docker-rock-cache",
+    "description": "Demo for Rock cache",
+    "keywords": ["rock", "cache", "demo"],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "email": "serggalka@gmail.com",
+        "issues": "https://github.com/romeOz/docker-rock-cache/issues",
+        "source": "https://github.com/romeOz/docker-rock-cache"
+    },
+    "authors": [
+        {
+            "name": "Ruslan",
+            "email": "serggalka@gmail.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.4.0",
+      "romeoz/rock-cache" : "0.11.*"
+    }
+}
