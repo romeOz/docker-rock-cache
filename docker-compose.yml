@@ -3,8 +3,8 @@ web:
   ports:
    - "8080:80"
   links:
-   - memcahed:memcahed
+   - memcached:memcached
   restart: always
-memcahed:
+memcached:
   image: romeoz/docker-memcached
   restart: always
