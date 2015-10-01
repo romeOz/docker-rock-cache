@@ -1,4 +1,4 @@
-web:
+demo:
   image: romeoz/docker-rock-cache
   ports:
    - "8080:80"
