@@ -1,5 +1,5 @@
 web:
-  image: app
+  image: romeoz/docker-rock-cache
   ports:
    - "8080:80"
   links:
