@@ -9,7 +9,7 @@ Installation
  * `docker run --name demo -d --link memcached:memcached -p 8080:80 romeoz/docker-rock-cache`
  * Open demo [http://localhost:8080/](http://localhost:8080/)
 
-Installation using the docker-compose
+Installation using the Docker Compose
 -------------------
 
  * [Install Docker](https://docs.docker.com/installation/) or [askubuntu](http://askubuntu.com/a/473720) 
