@@ -14,7 +14,7 @@ Installation using the Docker Compose
 
  * [Install Docker](https://docs.docker.com/installation/) or [askubuntu](http://askubuntu.com/a/473720) 
  * [Install Docker Compose](https://docs.docker.com/compose/install/)
- * `curl -L https://github.com/romeoz/docker-rock-cache/raw/master/docker-compose.yml`
+ * `curl -L https://github.com/romeoz/docker-rock-cache/raw/master/docker-compose.yml > docker-compose.yml`
  * `docker-compose up -d`
  * Open demo [http://localhost:8080/](http://localhost:8080/)
 
