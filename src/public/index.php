@@ -15,6 +15,7 @@ require(dirname(__DIR__) . '/vendor/autoload.php');
 /* Memcached storage */
 
 $config = [
+    'servers' => [[$_SERVER['MEMCACHED_PORT_11211_TCP_ADDR'], $_SERVER['MEMCACHED_PORT_11211_TCP_PORT']]],
     'hashKey' => CacheInterface::HASH_MD5, // Default: HASH_MD5
     'serializer' => CacheInterface::SERIALIZE_JSON // Default: SERIALIZE_PHP - php serializator
 ];
